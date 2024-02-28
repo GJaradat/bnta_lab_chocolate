@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "1621c992-b126-40f6-b406-c76b3c731fc1",
+		"name": "lab_chocolate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32626629",
+		"_collection_link": "https://martian-desert-819374.postman.co/workspace/Team-Workspace~657dd47d-329b-4427-8329-2d76847acc84/collection/32626629-1621c992-b126-40f6-b406-c76b3c731fc1?action=share&source=collection_link&creator=32626629"
+	},
+	"item": [
+		{
+			"name": "/estates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/chocolates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/chocolates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chocolates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estates{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/estates/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chocolates{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/chocolates/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chocolates",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chocolates/darker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/chocolates/darker50",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chocolates",
+						"darker50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "estates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chernomorsko\",\n    \"country\": \"Bulgaria\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/estates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"estates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chocolates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chernomorets\",\n    \"cocoaPercentage\": 45,\n    \"estateId\": 4 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/chocolates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chocolates"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
