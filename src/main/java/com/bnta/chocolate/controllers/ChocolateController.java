@@ -4,6 +4,7 @@ import com.bnta.chocolate.models.Chocolate;
 import com.bnta.chocolate.services.ChocolateService;
 import com.bnta.chocolate.services.EstateService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.cdi.Eager;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,5 +39,9 @@ public class ChocolateController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping(value = "/darker{cocoaPercentage}")
+    public ResponseEntity<List<Chocolate>> getDarkerChocolate(@PathVariable int cocoaPercentage){
+        return new ResponseEntity<>(chocolateService.darkAsHeckChocolate(cocoaPercentage), HttpStatus.OK);
+    }
 
 }
