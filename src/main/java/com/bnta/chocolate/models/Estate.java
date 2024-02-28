@@ -3,23 +3,27 @@ package com.bnta.chocolate.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.websocket.ClientEndpoint;
 import java.util.ArrayList;
 import java.util.List;
 
 
-
+@Entity
+@Table(name = "estates")
 public class Estate {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column(name = "name")
     private String name;
 
-
+    @Column(name = "country")
     private String country;
 
-
+    @OneToMany(mappedBy = "estate")
+    @JsonIgnoreProperties({"estate"})
     private List<Chocolate> chocolates;
 
     public Estate(String name, String country) {
